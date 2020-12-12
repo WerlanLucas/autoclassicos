@@ -1,0 +1,65 @@
+.jumbotron{
+	background-image: url('/img/autoclassicos6.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+.mestre{
+	width: 46px;
+	height: 46px;
+}
+.icones a{
+	display: block;
+	width: 36px;
+	height: 36px;
+}
+.icones li{
+	display: inline-block;
+	margin-left: 0.2rem; 
+}
+.icones a[href='https://github.com/']{
+	background-image: url('/img/github.png');
+	background-size: 36px 36px;
+}
+.icones a[href='https://www.google.com/']{
+	background-image: url('/img/Plus.png');
+	background-size: 36px 36px;
+}
+.icones a[href='https://br.linkedin.com/']{
+	background-image: url('/img/Linkedin.png');
+	background-size: 36px 36px;
+}
+.icones a[href='https://www.facebook.com/']{
+	background-image: url('/img/Facebook-logo.png');
+	background-size: 36px 36px;
+}
+.copy{
+	columns: #FFFFFF;
+}
+.avaliado{
+	color: #FFFFFF;
+}
+.card-header{
+	background-image: url('/img/autoclassicos2.jpg');
+	background-size: cover;
+	background-position: center;
+	color: white;
+}
+/*
+.nav-link{
+	/* classes do budstrep "pt" onde o [p](indica que o padding), e o [t](indica o padding top)*/
+	
+	padding-top: 5rem ; /* [pt-0 até pt-5*] para o top da página [OBSEVAÇÃO: CADA REM VALE 0,25 VEZES O VALOR JÁ EXISTENTE NO ESPAÇAMENTO DA PÁGINA] */
+	padding-left: ; /* [pl-0 até pl-5*] para esquerda da página*/
+	padding-right: ; /* [pr-0 até pr-5] para direita da página*/
+	padding-bottom: 5rem; /* [pb-0 até pb-5] para pante inferior da página*/
+	background: #F70909;
+	border: solid 1px; /*separção por bordas*/
+	margin-left: 1rem; /* [ml-0 até ml-5*] para o top da página*/
+	margin-right: 2rem; /* [mr-0 até mr-5*] para esquerda da página*/
+	margin-top: 2rem; /* [mt-0 até mt-5*] para direita da página*/
+	margin-bottom: 3rem; /* [mb-0 até mb-5*] para a parte inferior da página
+} 
+*/

@@ -1,0 +1,42 @@
+{% extends 'hospitais/base.html' %}
+
+{% block content %}
+<div class="container">
+	<table class="table-responsive-lg table-responsive-sm table-responsive-md pb-5 mb-5">
+		<thead>
+			<tr>
+				<th>Lojas</th>
+				<th>Foto</th>
+				<th>Descrição</th>
+				<th>Categorias</th>
+				<th>Conceito</th>
+
+				{% if user.is_authenticated %}
+				<th>Editar</th>
+				<th>Excluir</th>
+				{% endif %}
+
+			</tr>
+		</thead>
+		<tbody>
+			{% for hospital in hospitais %}
+			<tr>
+				<td>{{hospital.nome_hospital}}</td>
+				<td><img src="{{hospital.foto_url}}" class="img-fluid img-thumbnail"></td>
+				<td>{{hospital.desc_hospital}}</td>
+				<td>{{hospital.tipo_hospital}}</td>
+				<td>{{hospital.conceito_hospital}}</td>
+
+				{% if user.is_authenticated %}
+				<td><a href="{% url 'editar' hospital.id %}" class="btn btn-warning">Editar</a></td>
+				<td><a href="{% url 'deletar' hospital.id %}" class="btn btn-danger">Excluir</a></td>
+				{% endif %}
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+{{hospitais}}
+
+{% endblock content %}

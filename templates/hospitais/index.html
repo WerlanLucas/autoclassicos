@@ -1,0 +1,16 @@
+{% extends 'hospitais/base.html'%}
+
+{% block content %}
+<div class="container col-lg-5">
+	<div class="row ">
+		
+		<a href="{% url 'criar_usuario' %}" class="btn btn-dark col-lg-4 pt-5 pb-5 mb-2 mr-1"><i class="material-icons align-middle ">group_add</i>Criar Usuário</a>
+		<a href="{% url 'criar_hospital' %}" class="btn btn-dark col-lg-4 pt-5 pb-5 mb-2"><i class="material-icons">business</i>Inserir Lojas</a>
+		<a href="{% url 'hospitais' %}" class="btn btn-dark col-lg-4 pt-5 pb-5 mb-2 mr-1"><i class="material-icons">remove_red_eye</i>Ver Lojas</a>
+		<a href="{% url 'hospitais' %}" class="btn btn-dark col-lg-4 pt-5 pb-5 mb-2"><i class="material-icons ">border_color</i>Editar Lojas</a>
+		
+	</div>
+</div>
+
+
+{% endblock content %}

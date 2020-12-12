@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" href="/static/css/estilo.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<title>AutoClássicos</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-light"><!--aqui inicia o "menu" -->
+		<div class="container">
+			<button class="navbar-toggler" data-toggle="collapse" data-target="
+			#navbarSupportedContent">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+			<ul class="navbar-nav ml-auto mr-auto">
+
+				<li><a href="{% url 'index' %}" class="nav-link"><i class="material-icons align-middle">account_balance</i>Inicio</a></li>
+				<li><a href="{% url 'hospitais' %}" class="nav-link"><i class="material-icons align-middle">business</i>Lojas</a></li> 
+				<li><a href="{% url 'hospitais' %}" class="nav-link"><i class="material-icons align-middle">art_track</i>Categorias</a></li>
+				<li class="dropdown">
+					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="material-icons align-middle">location_city</i>Gerenciar Lojas</a>
+					<ul class="dropdown-menu bg-secondary">
+						<li>
+							<a href="{% url 'criar_hospital' %}" class="dropdown-item align-middle text-light"><i class="material-icons">publish</i>Inserir Lojas</a>
+						</li>
+						<li class="dropdown-divider"></li>
+						<li>
+							<a href="{% url 'hospitais' %}" class="dropdown-item align-middle text-light"><i class="material-icons ">border_color</i>Editar Lojas</a>
+						</li>
+						<li class="dropdown-divider"></li>
+						<li>
+							<a href="{% url 'hospitais' %}" class="dropdown-item align-middle text-light"><i class="material-icons">delete_sweep</i>Excluir Lojas</a>
+						</li>
+					</ul>
+				</li>
+
+			</ul>
+
+			<!----------------------------------MENU USUÁRIO------->
+			<ul class="navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="material-icons align-middle">group</i>Usuários</a>
+					<ul class="dropdown-menu bg-secondary">
+						<li>
+							<a href="{% url 'criar_usuario' %}" class="dropdown-item text-light"><i class="material-icons align-middle ">group_add</i>Criar Usuário</a>
+						</li>
+						<li class="dropdown-divider"></li>
+						<li>
+							<a href="{% url 'login' %}" class="dropdown-item text-light"><i class="material-icons align-middle">exit_to_app</i>Logar</a>
+						</li>
+						<li class="dropdown-divider"></li>
+						<li>
+							<a href="{% url 'logout' %}" class="dropdown-item text-light"><i class="material-icons align-middle text-danger">highlight_off</i>Sair</a>
+						</li>
+					</ul>
+				</li>
+				
+			</ul>
+
+
+		</div><!--Fim collapse-->
+	</div><!--Fim container-->
+</nav><!--Fim de "menu"-->
+
+<!--------------------------------------------------------------------------------------------------------------->
+<main>
+	<section class="jumbotron"><!--Íncio do titulo-->
+
+		<form method="GET" class="input-group">
+			<input class="form-control" type="search" placeholder="Busque aqui!" name="search">
+			<button class="btn-primary ml-1">Pesquisar</button>
+		</form>
+	</section><!--Fim de "titulo"-->
+	<section>
+		
+		{% block content %}
+
+
+		{% endblock content %}
+
+		
+
+	</section>
+</main>
+<footer class="mt-4 bg-danger fixed-bottom"><!--Íncio do "rodapé"-->
+	<div class="container d-flex justify-content-between">
+		<span class="copy mt-4">
+			Copyright 2020
+		</span>
+
+		<ul class="navbar icones">
+			<li><a href="https://github.com/" class="text-hide">GitHub</a></li>
+			<li><a href="https://www.google.com/" class="text-hide">Google plus</a></li>
+			<li><a href="https://br.linkedin.com/" class="text-hide">Linkedin</a></li>
+			<li><a href="https://www.facebook.com/" class="text-hide">Facebook</a></li>
+		</ul>
+	</div>
+</footer><!--Fim do "rodapé"-->
+<!-------------------------------------------------------------------------------------->
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="/static/js/bootstrap.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends "hospitais/base.html" %}
+{% load crispy_forms_tags%}
+{% block content %}
+{% if user.is_authenticated %}
+
+
+<div class="container col-lg-5 mb-5 pb-5">
+	{% for msg in messages %}
+	<div class="alert {{msg.tags}} alert-success">
+		<button class="close" data-dismiss="alert" role="alert" >
+			<span aria-hiddem=" true">&times;</span>
+		</button>
+		{{msg}}
+	</div>
+	{% endfor %}
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form | crispy }}
+		<input type="submit" value="Enviar" class="input-group btn btn-success mb-5">
+
+	</form>
+</div>
+{% endif %}
+
+{% endblock content %}
+
+
